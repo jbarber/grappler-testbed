@@ -31,3 +31,9 @@ func TestRunWithoutFlagsGreets(t *testing.T) {
 		t.Errorf("run() printed %q, want %q", got, "hello, world")
 	}
 }
+
+func TestDeliberatelyBroken(t *testing.T) {
+	if Greet("x") != "this will not match" {
+		t.Fatal("deliberate CI failure for the grappler test plan")
+	}
+}
