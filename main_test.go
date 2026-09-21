@@ -30,3 +30,7 @@ func TestRunJSON(t *testing.T) {
 		t.Errorf("run = %q", got)
 	}
 }
+
+func TestBreaksCIOnPurpose(t *testing.T) {
+	t.Fatal("planted to test whether the auto CI nudge reaches a Claude pane")
+}
